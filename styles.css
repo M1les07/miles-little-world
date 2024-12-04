@@ -1,0 +1,387 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--header-bg);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+header .header-content {
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+header .button {
+    display: flex;
+    position: relative;
+}
+
+header .logo {
+    width: 80px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header .header-icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+header img {
+    width: 30px;
+    height: 30px;
+}
+
+header .profile-icon img, header .theme-toggle img {
+    width: 25px;
+    height: 25px;
+}
+
+/* Adding Smooth Scroll Effect */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hide Scrollbar */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.hero {
+    text-align: center;
+    background: linear-gradient(135deg, #007acc, #ff4081);
+    color: white;
+    padding: 100px 20px;
+    margin-top: 80px;
+}
+
+.cta-button {
+    background-color: white;
+    color: #007acc;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.projects, .contact {
+    padding: 40px 20px;
+}
+
+.project-card, form {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Light and Dark Mode Variables */
+:root {
+    --header-bg: #ffffff;
+    --card-bg: #f9f9f9;
+    --text-color: #000000;
+}
+
+body.dark {
+    --header-bg: #1a1a1a;
+    --card-bg: #2a2a2a;
+    --text-color: #ffffff;
+}
+
+/* Light Mode Variables */
+:root {
+    --header-bg: #ffffff;
+    --card-bg: #f9f9f9;
+    --text-color: #000000;
+    --link-color: #007acc;
+}
+
+/* Dark Mode Variables */
+body.dark {
+    --header-bg: #1a1a1a;
+    --card-bg: #2a2a2a;
+    --text-color: #ffffff;
+    --link-color: #ff4081;
+}
+
+/* Global Styles Using Variables */
+body {
+    background-color: var(--header-bg);
+    color: var(--text-color);
+}
+
+a {
+    color: var(--link-color);
+}
+
+.skills {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: var(--card-bg);
+}
+
+.skills h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.skill-card {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: var(--header-bg);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(158, 6, 213, 0.789);
+}
+
+.skill-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+/* Project Link Section */
+.projects h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.projects h3 {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.projects p {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.project-link {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.project-link h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.project-button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    background-color: var(--link-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.project-button:hover {
+    background-color: #0e46c9; /* Change to a different shade on hover */
+}
+
+/* Logo Text Styles */
+.logo-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--logo-color); /* Dynamic color based on theme */
+    font-family: 'Futuristic', sans-serif; /* Optional font for a futuristic look */
+}
+
+/* Light and Dark Theme Colors */
+:root {
+    --header-bg: #f9f9f9; /* Light mode background */
+    --logo-color: #007bff; /* Blue for light mode */
+    --card-bg: #ffffff; /* Contact form background */
+    --input-bg: #f9f9f9; /* Light mode input background */
+    --input-border: #ccc; /* Light mode input border */
+    --text-color: #333; /* Dark text for light mode */
+    --link-color: #007bff; /* Blue for links */
+}
+
+body.dark-mode {
+    --header-bg: #1c1c1c; /* Dark mode background */
+    --logo-color: #4caf50; /* Green for dark mode */
+    --card-bg: #2a2a2a; /* Dark mode contact form background */
+    --input-bg: #1c1c1c; /* Dark mode input background */
+    --input-border: #444; /* Dark mode input border */
+    --text-color: #f9f9f9; /* Light text for dark mode */
+    --link-color: #4caf50; /* Green for links */
+}
+
+/* Contact Section Styling */
+.contact-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: var(--card-bg);
+}
+
+.contact-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Icon Grid */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.icon-card {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: var(--header-bg);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.icon-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.icon-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(158, 6, 213, 0.789);
+}
+
+.icon-card p {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+/* Contact Info Pop-Up */
+.contact-info {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: var(--header-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    transition: all 0.3s ease;
+    color: var(--text-color);
+}
+
+/* General Styling */
+.section {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .highlight {
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Homepage Intro */
+  .intro-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .intro-container p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* About Section */
+  .about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .about-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .about-container p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  
+  .skills-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .skills-list li {
+    margin: 10px 0;
+    font-size: 1rem;
+  }
+  
+  /* Dark Mode Support */
+  body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+  
+  body.dark-mode button {
+    background-color: #333;
+    color: #f0f0f0;
+  }
+  
+  body.dark-mode button:hover {
+    background-color: #555;
+  }  
